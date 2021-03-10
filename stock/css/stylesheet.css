@@ -1,0 +1,188 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: whitney ssm a,whitney ssm b,lucida grande,lucida sans,Verdana,Helvetica,Arial,sans-serif;
+}
+/* header, logo, add button, search bar */
+header{
+    width: 100%;
+    height:85px;
+    background-color: rgb(31, 175, 139);
+}
+#logo{
+    float: left;
+    padding: 0px 30px;
+    margin-top: 20px;
+    color: rgb(235, 233, 233);   
+    text-shadow: 2px 1px rgb(70, 70, 70);
+}
+#actions .actionCont{
+    display: flex;
+    margin-top: 30px;
+    padding: 0px 30px;
+    float:right;   
+}
+#actions ul{
+    list-style: none;
+}
+#actions ul li{
+    padding-left: 15px;
+}
+#addButton{
+    font-size: 15px;
+    font-weight: bold;
+    border-width: 2px;
+    background-color:rgb(134, 224, 202) ;
+    border-radius: 5px;
+    color: rgb(70, 70, 70);
+}
+#addButton:enabled:hover{
+    font-size: 17px;
+    font-weight: bolder;
+    background-color:rgb(122, 206, 185) ;
+    border-radius: 5px;
+}
+#addButton:disabled{
+    color:rgb(105, 104, 104) ;
+}
+#searchButton{
+    padding: 2px 15px;
+    background-color:rgb(210, 250, 240) ;
+    border: 2px solid rgb(97, 97, 97);
+    border-radius: 4px;
+    
+}
+
+ /*Add information box*/
+ #addData{
+    width: 40%;
+    height: auto;
+    border: 0px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 10px;
+    background-color: rgb(230, 238, 236);
+    display: flex;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+#left{
+    margin-left: auto;
+    margin-right: 5%;
+}
+#addData input, select, textarea{
+    background-color:rgb(244, 255, 253) ;
+    border: 1.5px solid rgb(97, 97, 97);
+    border-radius: 3px;
+}
+#addData #left p input select{
+    float:right;
+}
+#right{
+    margin-right: auto;
+    margin-left:5%;
+}
+#addData #right p input select button{
+    float:right;
+}
+/* #com{
+    width: auto;
+    height: 50px;
+} */
+#submit{
+    float: right;
+    margin-right: 5px;
+    padding: 3px 10px;
+    font-size: 16px;
+    font-weight:bold;
+    background-color:rgb(205, 255, 243);
+    border-radius: 5px;
+    color: rgb(87, 87, 87);
+    border: 2px solid rgb(112, 112, 112);
+}
+#submit:enabled:hover{
+    font-size: 17px;
+    background-color:rgb(122, 206, 185)  ;
+    border-radius: 5px;
+}
+#submit:disabled{
+    color:rgb(122, 122, 122);
+}
+
+/* main table */
+#mainTable{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    overflow:auto;
+}
+#center{
+    margin-left: auto;
+    margin-right: auto;
+}
+#mainTable table tr th{
+   border-collapse: collapse;
+   background-color: rgb(118, 194, 176) ;
+   text-align: center;
+   color: rgb(255, 255, 255);
+   text-shadow: 1px 1px rgb(107, 107, 107);
+}
+#mainTable table tr th:nth-child(-n+10){
+    padding: 5px 25px;
+}
+#mainTable table tr th:last-child{
+    padding:5px 25px;
+}
+#mainTable table tr td{
+    border:0px ;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    text-align: center;
+    padding:5px 0px;
+}
+#mainTable table tr td:last-child{
+    word-wrap:break-word ;
+}
+#mainTable table tr{
+    background-color:rgb(255, 255, 255) ;
+    color: rgb(104, 104, 104);
+    font-weight: 500;
+}
+tr{
+     transition: all .10s ease-in-out;
+}
+
+
+
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+
+
+}
+
+
