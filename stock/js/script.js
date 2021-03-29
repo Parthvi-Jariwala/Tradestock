@@ -26,7 +26,10 @@
             var addButton=document.getElementById('addButton');
             if(add.style.display=='none'){
                 add.style.display='flex';
-                addButton.disabled=true;
+
+            }
+            else if(add.style.display=='flex'){
+                add.style.display='none';
             }
         }
         
@@ -139,13 +142,97 @@
                 var add=document.getElementById('addData');
                 add.style.display='none';
                 document.getElementById('addButton').disabled=false;
+
+
+                rowToInput();
            }
 
         }
-        
-        
+    
+var rIndex,table=document.getElementById('center');
 
-        
+//display selected row data into input box
+
+        function rowToInput(){
+            
+            for(var i = 1; i < table.rows.length; i++){
+                table.rows[i].onclick=function(){
+                    rIndex=this.rowIndex;
+            
+                    document.getElementById('name').value=this.cells[1].innerHTML;
+                    document.getElementById('ticker').value=this.cells[2].innerHTML;
+                    document.getElementById('buySell').value=this.cells[3].innerHTML;
+                    document.getElementById('cPrice').value=this.cells[4].innerHTML;
+                    document.getElementById('tPrice').value=this.cells[5].innerHTML;
+                    document.getElementById('stopLoss').value=this.cells[6].innerHTML;
+                    document.getElementById('tradeType').value=this.cells[7].innerHTML;
+                    document.getElementById('duration').value=this.cells[8].innerHTML;
+                    document.getElementById('riskLevel').value=this.cells[9].innerHTML;
+                    document.getElementById('com').value=this.cells[10].innerHTML;
+                };
+            }
+        }
+        rowToInput();
+
+
+//edit button 
+
+        function editButton(){
+
+            if(!rowToInput()){
+                var name=document.getElementById('name').value;
+                var ticker=document.getElementById('ticker').value;
+                var buySell=document.getElementById('buySell').value;
+                var cPrice=document.getElementById('cPrice').value;
+                var tPrice=document.getElementById('tPrice').value;
+                var stopLoss=document.getElementById('stopLoss').value;
+                var tradeType=document.getElementById('tradeType').value;
+                var duration=document.getElementById('duration').value;
+                var riskLevel=document.getElementById('riskLevel').value;
+                var comment=document.getElementById('com').value;
+
+                table.rows[rIndex].cells[1].innerHTML=name;
+                table.rows[rIndex].cells[2].innerHTML=ticker;
+                table.rows[rIndex].cells[3].innerHTML=buySell;
+                table.rows[rIndex].cells[4].innerHTML=cPrice;
+                table.rows[rIndex].cells[5].innerHTML=tPrice;
+                table.rows[rIndex].cells[6].innerHTML=stopLoss;
+                table.rows[rIndex].cells[7].innerHTML=tradeType;
+                table.rows[rIndex].cells[8].innerHTML=duration;
+                table.rows[rIndex].cells[9].innerHTML=riskLevel;
+                table.rows[rIndex].cells[10].innerHTML=comment;
+
+                document.getElementById('name').value='';
+                document.getElementById('ticker').value='';
+                document.getElementById('buySell').value='';
+                document.getElementById('cPrice').value='';
+                document.getElementById('tPrice').value='';
+                document.getElementById('stopLoss').value='';
+                document.getElementById('tradeType').value='';
+                document.getElementById('duration').value='';
+                document.getElementById('riskLevel').value='';
+                document.getElementById('com').value='';
+            }
+        }
+
+//delete button
+
+        function deleteButton(){
+            if(!rowToInput()){
+                table.deleteRow(rIndex);
+
+                document.getElementById('name').value='';
+                document.getElementById('ticker').value='';
+                document.getElementById('buySell').value='';
+                document.getElementById('cPrice').value='';
+                document.getElementById('tPrice').value='';
+                document.getElementById('stopLoss').value='';
+                document.getElementById('tradeType').value='';
+                document.getElementById('duration').value='';
+                document.getElementById('riskLevel').value='';
+                document.getElementById('com').value='';
+            }
+        }
 
 
 

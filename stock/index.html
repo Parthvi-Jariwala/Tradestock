@@ -7,6 +7,7 @@
     <title>stocksite</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">  -->
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
             <ul class="actionCont dropdown right">
                 <li class="actionItems">
                     <div id="add">
-                        <button id="addButton" onclick="addButton()">Add</button>  
+                        <button id="addButton" onclick="addButton()">Add/Edit</button>  
                     </div>
                 </li>
                 <li class="actionItems">
@@ -57,7 +58,11 @@
             <p> Other Comment :
                 <textarea type="text" id="com"></textarea>
             </p>
-            <button type="button" id="submit" onclick="submit()" >Sumbit</button>
+            <div id="add"></div>
+                <button type="button" id="submit" onclick="submit()" >Sumbit</button>
+                <button id='editButton' onclick="editButton()">Edit</button>
+                <button id='deleteButton' onclick="deleteButton()">Delete</button>
+            </div>
         </div>
     </div>
     <div id="mainTable">
@@ -73,11 +78,116 @@
                     <th id="type">Trade Type</th>
                     <th id="dur">Approx.Duration</th>
                     <th id="risk">Risk Level</th>
-                    <th id="comment">Other Comment</th>
+                    <th id="comment">Other Comment</th>                    
                 </tr>
-                <tbody id="myTable" >
+                 <tbody id="myTable" >                    
                     <div id="txtValue"></div>
-                </tbody>
+                </tbody>                
+                <tr>
+                    <td>06/26/2020</td>
+                    <td>DIV</td>
+                    <td>SPX</td>
+                    <td>Buy</td>
+                    <td>3010</td>
+                    <td>3100</td>
+                    <td>2990</td>
+                    <td>Swing</td>
+                    <td>1 Week</td>
+                    <td>Low</td>
+                    <td>Buy SPY based on these, follow strict stop loss</td>
+                </tr>
+                <tr>
+                    <td>06/26/2020</td>
+                    <td>VS</td>
+                    <td>VZ</td>
+                    <td>Buy</td>
+                    <td>52</td>
+                    <td>60</td>
+                    <td>40</td>
+                    <td>Swing</td>
+                    <td>1 Month</td>
+                    <td>Medium</td>
+                    <td>Won't lose your money in crazy times</td>
+                </tr>
+                <tr>
+                    <td>06/30/2020</td>
+                    <td>DIV</td>
+                    <td>ISRG</td>
+                    <td>Buy</td>
+                    <td>551</td>
+                    <td>590</td>
+                    <td>540</td>
+                    <td>Swing</td>
+                    <td>1 Month</td>
+                    <td>Low</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>07/07/2020</td>
+                    <td>DIV</td>
+                    <td>SPX</td>
+                    <td>SELL</td>
+                    <td>3180</td>
+                    <td>3000</td>
+                    <td>3200</td>
+                    <td>Swing</td>
+                    <td>1 Month</td>
+                    <td>Medium</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>07/09/2020</td>
+                    <td>DIV</td>
+                    <td>LMT</td>
+                    <td>Buy</td>
+                    <td>300</td>
+                    <td>450-500</td>
+                    <td></td>
+                    <td>Long</td>
+                    <td>1 Year</td>
+                    <td>High</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12/15/2020</td>
+                    <td>VS</td>
+                    <td>TSLA</td>
+                    <td>Buy</td>
+                    <td>630</td>
+                    <td>25%</td>
+                    <td>10%</td>
+                    <td>Swing</td>
+                    <td>1 Month</td>
+                    <td>Very High</td>
+                    <td>After Results</td>
+                </tr>
+                <tr>
+                    <td>12/15/2020</td>
+                    <td>PUNIT</td>
+                    <td>VALE210319C19</td>
+                    <td>Buy</td>
+                    <td>0.96</td>
+                    <td>2</td>
+                    <td>0.5</td>
+                    <td>Day</td>
+                    <td>N/A</td>
+                    <td>High</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>02/04/2020</td>
+                    <td>PUNIT</td>
+                    <td>BA2011224C226</td>
+                    <td>Buy</td>
+                    <td>9</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>Day</td>
+                    <td>N/A</td>
+                    <td>High</td>
+                    <td></td>
+                </tr>
+                
         </table>
     </div>
 
@@ -88,5 +198,6 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> -->
 </body>
 </html>
